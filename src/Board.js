@@ -1,5 +1,6 @@
 import { useEffect, useState, useCallback, createRef } from 'react';
 import Square from './Square';
+import './Board.css';
 
 export default function Board(props) {
     const squares = (Array.from(Array(props.rows * props.cols).keys())).map((id) => <Square key={id}/>)
@@ -16,6 +17,9 @@ export default function Board(props) {
     }
 
     useEffect(() => {
+        document.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+          });
     });
 
     return (

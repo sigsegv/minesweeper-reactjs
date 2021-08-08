@@ -3,6 +3,6 @@ import Board from './Board';
 
 export default function Game(props) {
     return (
-        <Board rows="9" cols="9"/>
+        <Board rows="9" cols="9" mines="33"/>
     )
 }

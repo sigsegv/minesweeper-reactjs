@@ -5,7 +5,13 @@ export default function Square(props) {
     return (
         <button 
         className="square"
-        onClick={()=>console.log('click')}
+        onClick={(event)=>{
+            console.log('onClick');   
+        }}
+        onContextMenu ={(event)=>{
+            console.log('onContextMenu ');
+        }}
+        
         ></button>
     )
 }
