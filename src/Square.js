@@ -6,7 +6,7 @@ export default function Square(props) {
         <button 
         className="square"
         onClick={(event)=>{
-            console.log('onClick');   
+            console.log('onClick id=' + props.id + ' state=' + props.value.state);   
         }}
         onContextMenu ={(event)=>{
             console.log('onContextMenu ');
