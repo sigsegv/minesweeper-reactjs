@@ -10,7 +10,15 @@ export default function Game(props) {
         arr[index] = { key:index, mine:false, state:null}
     });
 
+    function handleLeftClick(i) {
+        console.log('game handleLeftClick ' + i);
+    }
+
+    function handleRightClick(i) {
+        console.log('game handleRightClick ' + i);
+    }
+
     return (
-        <Board rows={rows} cols={cols} squares={squares} mines={mines}/>
+        <Board rows={rows} cols={cols} squares={squares} mines={mines} onLeftClick={i => handleLeftClick(i)} onRightClick={i => handleRightClick(i)}/>
     )
 }

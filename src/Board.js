@@ -11,7 +11,7 @@ export default function Board(props) {
         for(var c = 0; c < props.cols; ++c)
         {
             const id = (r * props.cols) + c;
-            squaresForRow[c] = <Square id={props.squares[id].key} value={props.squares[id]} />
+            squaresForRow[c] = <Square key={props.squares[id].key} id={props.squares[id].key} value={props.squares[id]} onLeftClick={props.onLeftClick} onRightClick={props.onRightClick} />
         }
         rows[r] = <div key={r}>{squaresForRow}</div>
     }
